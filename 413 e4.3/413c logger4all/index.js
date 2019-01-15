@@ -1,20 +1,30 @@
+/*
+413-3 video 4.3
+-------------------------
+middleware express.static
+middleware next()
+-------------------------
+./index.js
+./files/index.html
+*/
 var express = require('express');
-//we need to import/include the express package
 var app = express();
-//the express function, to create our express app
-//represents in this variable app
 
-//
-var logger = (req, res, next) => {
-    var url = req.url;
-    var time = new Date();
+var logger = (req, res, next) => { 
+    var url = req.url; //get url
+    var time = new Date(); //date object of current date y time
+    //joe code
+    //res.write('Received request for '+url+ ' at ' + time);
+    //res.end();
+    //joe code
     console.log('Received request for '+url+ ' at ' + time);
     //next function
     next();
 }
 //
-
-app.use(logger);
+//logger middleware will be invoked on any http request
+//it is going be in the chain of any request that we get 
+app.use(logger);//logger for all
 //
 
 app.use('/public', express.static('files'));

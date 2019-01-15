@@ -1,10 +1,23 @@
+/*
+413-2 video 4.3
+-------------------------
+middleware express.static
+-------------------------
+./index.js
+./files/index.html
+*/
 var express = require('express');
 //we need to import/include the express package
 var app = express();
-//the express function, to create our express app
-//represents in this variable app
+//use the express function to create our app
 
-app.use('/public', express.static('files'));
+//middleware: express.static
+app.use('/public', express.static('files')); //app dot use function
+//any uri in slash public folder, should serve statuc content
+//uri slash public
+//slash static middleware function
+//specify the folder or directory that hold the static content/Kaang.t3nt/
+//a folder called files
 
 app.use(/*default*/ (req,res)=> {
     res.status(404).sendFile(__dirname + '/files/404.html');
