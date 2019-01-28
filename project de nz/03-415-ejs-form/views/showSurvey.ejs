@@ -1,0 +1,39 @@
+<!-- This is views/welcome.ejs -->
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>
+        第<%= ejs_ordinal %>次公开课.
+        </h1>
+        <p>
+            <%= ejs_stage %> <%= ejs_classNom %> 班 
+            学员姓名：<%= ejs_kid_nom %>
+            班级： <%= ejs_class_nom %>
+            授课老师：<%= ejs_teacher_nom %>
+            填表人与孩子的关系：<%= ejs_relation2kid %>
+        </p>
+        <p>
+            1. 您对本次公开课的评价是？<%= ejs_q1 %> <br>
+            2. 您对班级老师的授课满意度如何？<%= ejs_q2 %> <br>
+            3.您觉得班级老师对孩子的关爱程度如何？<%= ejs_q3 %> <br>
+            4.您对老师定期与您沟通孩子学习情况的满意度如何？<%= ejs_q4 %> <br>
+            5. 您对中心整体教学服务质量的满意度如何？<%= ejs_q5 %>
+        </p>
+        <p>
+            11. 您是否打算为孩子续报下一学年的课程？<%= ejs_q11 %> 
+            <br>1)已续报 2)是，会续报 3)正在考虑 4)否，不续报
+        </p>
+        <p>如果您正在考虑、或不打算续报下学年，请问具体考量的点有哪些？<br> 
+            <%= ejs_text1 %>
+        </p>
+        <p>*您在本次公开课上看到孩子的进步点有哪些？<br>
+            <%= ejs_text2 %>
+        </p>
+        <p>请对我们的工作提出您的宝贵意见与建议：<br>
+            <%= ejs_text3 %>
+        </p>
+        <p>
+            填写日期： <%= ejs_year %> 年<%= ejs_month %> 月 <%= ejs_day %>  日
+        </p>
+    </body>
+</html>

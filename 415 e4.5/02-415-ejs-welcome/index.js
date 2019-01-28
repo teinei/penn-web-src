@@ -1,47 +1,25 @@
 /*
-src3
-/name/Lydia/location/United States
+src2
+415 ejs welcome
+seperate js from html
+embedded js, ejs
 */
+//
 var express = require('express');
 var app = express();
-//
+//ejs is one of our view engine
 app.set('view engine','ejs');
-//
+//ejs goes into ./view dir
 //
 app.get('/',(req,res) => {
-    //
+    //welcome == welcome.ejs
     res.render('welcome',{username:'CandyLover',isAdmin: true});
+    //pass arguments by js objects
     //
 });
 //
-/*
-app.use('/handleForm', (req,res) => {
-    //
-    var name = req.body.username;
-    var animals = [].concat(req.body.animal);
-    //
-    res.type('html').status(200);
-    res.write('Hello, ' + name + ', nice to meet you.');
-    res.write('<p>Here are the animals you like:');
-    res.write('<ul>');
-    animals.forEach((animal)=>{
-        res.write('<li>'+animal+'</li>');
-    });
-    res.write('</ul>');
-    res.send('Thank you');
-    res.write("<a href='/public/form.html'>"+"Back to form</a>");
-    res.end();
-    //
-    //
-});
-*/
 //
-//finally we will configure the app
 app.listen(3000,() => {
     console.log('Listening on port 3000, 414d, form');
 });
-//listening on port 3000, which will access by the browser
-//define callback function that will be invoked
-//once it start to listening 
-//we just log the fact, that we are listnening on port 3000
- 
+//

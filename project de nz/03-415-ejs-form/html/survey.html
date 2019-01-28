@@ -1,0 +1,326 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 6.0.7.3 (MacOSX)"/>
+	<meta name="author" content="Administrator"/>
+	<meta name="created" content="2018-12-12T14:25:00"/>
+	<meta name="changed" content="2019-01-19T09:19:08.767627761"/>
+	<meta name="KSOProductBuildVer" content="2052-10.1.0.7697"/>
+	<style type="text/css">
+        /*
+        */
+	</style>
+    <link rel="stylesheet" href="./css/survey.css">
+</head>
+<body lang="en-US" text="#000000" dir="ltr">
+    <!-- -->
+    <form action="/handleSurvey" method="post">
+    <!-- // -->
+    <!-- //heading1 -->
+	<h1>瑞思学科英语
+		<!-- <input type="text" name="class-nom"> -->
+		<input type="text" name="classNom"> 班
+		<!--  -->
+		第 <!--  -->
+		<select name="ordinal"> <!-- ordinal -->
+			<option value="1" selected>1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+		</select>
+		<!-- <input type="text" name="ordinal"> -->
+		次公开课
+        满意度反馈表
+    </h1>
+    <!-- // -->
+    <a>
+    为了更好地保障孩子的学习效果，提升我们的教学服务质量，我们真诚地期待您提出宝贵意见，请您配合填写以下反馈表。
+	</a>
+    <p>学员姓名：<input type="text" name="studentNom">
+		班级： <!-- <input type="text" name="classNom"> -->
+		<a>
+			<select name="stage"> <!-- size='2.5' -->
+				<option value="k" selected>K</option>
+				<option value="s">S</option>
+				<option value="pm">PM</option>
+				<option value="bbc">BBC</option>
+				<!-- <option name="class-stage" value="prerise">PreRise</option> -->
+			</select>
+			<select name="classNomDigit0"> <!--  -->
+				<option value="0">0</option>
+				<option value="1" selected>1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+			</select>
+			<select name="classNomDigit1"> <!--  -->
+				<option value="0" selected>0</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+			</select>
+			<select name="classNomDigit2"> <!--  -->
+				<option value="0">0</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3" selected>3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+			</select>
+			<select name="classNomDigit3"> <!--  -->
+				<option value="0" selected>0</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+			</select>
+		</a>
+        授课老师：<input type="text" name="teacherNom">
+        填表人与孩子的关系：<input type="text" name="relation2student">
+    </p>
+<table>
+    <!-- 
+	<col width="247">
+	<col width="89">
+	<col width="89">
+	<col width="89">
+	<col width="89">
+	<col width="89">
+    // -->
+	<tr valign="top">
+        <td>
+            第1~5项请您按满意程度、在0分~10分之间进行评分。
+        </td>
+        <!-- // -->
+		<td>非常满意 10分</td>
+		<td>满意 9分</td>
+		<td>比较满意 8分</td>
+		<td>不太满意 7分</td>
+		<td>非常不满意 6分及以下</td>        
+	</tr>
+	<tr>
+		<td>1. 您对本次公开课的评价是？</td>
+		<!-- // -->
+		<td><input name="q1" type="radio" value="10">10分</td>
+		<td><input name="q1" type="radio" value="9">9分</td>
+		<td><input name="q1" type="radio" value="8">8分</td>
+		<td><input name="q1" type="radio" value="7">7分</td>
+		<td><input name="q1" type="radio" value="6">6分及以下</td>
+    </tr>
+	<tr valign="top">
+		<td>2. 您对班级老师的授课满意度如何？</td>
+        <!-- // -->
+        <td><input name="q2" type="radio" value="10">10分</td>
+		<td><input name="q2" type="radio" value="9">9分</td>
+		<td><input name="q2" type="radio" value="8">8分</td>
+      	<td><input name="q2" type="radio" value="7">7分</td>
+		<td><input name="q2" type="radio" value="6">6分及以下</td>
+	</tr>
+	<tr>		
+		<td>3.您觉得班级老师对孩子的关爱程度如何？</td>
+        <!-- //check boxes -->
+                <!-- // -->
+    	<td><input name="q3" type="radio" value="10">10分</td>
+		<td><input name="q3" type="radio" value="9">9分</td>
+	    <td><input name="q3" type="radio" value="8">8分</td>
+        <td><input name="q3" type="radio" value="7">7分</td>
+	    <td><input name="q3" type="radio" value="6">6分及以下</td>
+        <!-- -->
+	</tr>
+	<tr valign="top">
+		<td>4.您对老师定期与您沟通孩子学习情况的满意度如何？</td>
+		<!-- radio buttons -->
+		<td><input name="q4" type="radio" value="10">10分</td>
+		<td><input name="q4" type="radio" value="9">9分</td>
+		<td><input name="q4" type="radio" value="8">8分</td>
+		<td><input name="q4" type="radio" value="7">7分</td>
+		<td><input name="q4" type="radio" value="6">6分及以下</td>
+		<!-- -->
+	</tr>
+	<tr valign="top">
+		<td>5. 您对中心整体教学服务质量的满意度如何？
+		<!-- radio buttons -->
+		<td><input name="q5" type="radio" value="10">10分</td>
+		<td><input name="q5" type="radio" value="9">9分</td>
+		<td><input name="q5" type="radio" value="8">8分</td>
+		<td><input name="q5" type="radio" value="7">7分</td>
+		<td><input name="q5" type="radio" value="6">6分及以下</td>
+		<!-- -->
+	</tr>
+	<tr>
+		<td colspan="6">第 6~10 项请按您的实际情况进行 √ 选</td>
+	</tr>
+	<tr>
+		<td rowspan="2" colspan="2">6. 您是否了解孩子目前的学习进度和学习内容？</td>
+		<td>非常了解</td>
+		<td>了解</td>
+		<td>不太了解</td>
+		<td>完全不了解</td>
+	</tr>
+	<tr>
+        <!-- -->
+		<td><input name="q6" type="radio" value="1"></td>
+		<td><input name="q6" type="radio" value="2"></td>
+		<td><input name="q6" type="radio" value="3"></td>
+		<td><input name="q6" type="radio" value="4"></td>
+	</tr>
+	<tr>
+		<td rowspan="2" colspan="2">7. 您希望孩子的英语能力在哪些方面得到提高？</td>
+        <!-- -->
+        <td>口语表达</td>
+		<td>知识层面</td>
+		<td>应用能力</td>
+		<td>团队合作</td>
+	</tr>
+    <tr>
+        <!-- -->
+        <!-- -->
+		<td><input name="q7" type="radio" value="1"></td>
+		<td><input name="q7" type="radio" value="2"></td>
+		<td><input name="q7" type="radio" value="3"></td>
+		<td><input name="q7" type="radio" value="4"></td>
+	</tr>
+	<tr >
+		<td td rowspan="2" colspan="2">8. 您是否经常主动与班级老师进行沟通？</td>
+		<td>经常</td>
+		<td>偶尔</td>
+		<td>很少</td>
+		<td>几乎不</td>
+	</tr>
+	<tr>
+		<td><input name="q8" type="radio" value="1"></td>
+		<td><input name="q8" type="radio" value="2"></td>
+		<td><input name="q8" type="radio" value="3"></td>
+		<td><input name="q8" type="radio" value="4"></td>
+	</tr>
+	<tr>
+		<td rowspan="2" colspan="2">
+            9. 您是否按照老师的指导、在家陪伴孩子复习？
+			<br>（听歌曲/复习课件/完成家庭作业.....等)
+		</td>
+        <td>一周至少2次</td>
+		<td>一周1次</td>
+		<td>偶尔</td>
+		<td>从不</td>
+        <!-- -->
+	</tr>
+    <tr>
+		<td><input name="q9" type="radio" value="1"></td>
+		<td><input name="q9" type="radio" value="2"></td>
+		<td><input name="q9" type="radio" value="3"></td>
+		<td><input name="q9" type="radio" value="4"></td>
+	</tr>
+	<tr>
+		<td rowspan="2" colspan="2">10. 您是否知晓瑞思口碑政策？
+		</td>
+		<td colspan="2" >是</td>
+		<td colspan="2">否</td>
+	</tr>
+	<tr>
+        <td colspan="2"><input name="q10" type="radio" value="1"></td>
+        <td colspan="2"><input name="q10" type="radio" value="2"></td>
+        <!-- -->
+	</tr>
+	<tr>
+		<td rowspan="2" colspan="2">11. 您是否打算为孩子续报下一学年的课程？
+		</td>
+		<td>已续报
+		</td>
+		<td>是，会续报
+		</td>
+		<td>正在考虑
+		</td>
+		<td>否，不续报
+		</td>
+	</tr>
+	<tr>
+		<td><input name="q11" type="radio" value="1"></td>
+		<td><input name="q11" type="radio" value="2"></td>
+		<td><input name="q11" type="radio" value="3"></td>
+		<td><input name="q11" type="radio" value="4"></td>
+	</tr>
+</table>
+<p>如果您正在考虑、或不打算续报下学年，请问具体考量的点有哪些？</p>
+<textarea name="text1" rows="7" cols="154"></textarea>
+
+<p>*您在本次公开课上看到孩子的进步点有哪些？</p>
+<textarea name="text2" rows="7" cols="154"></textarea>
+    
+<p>请对我们的工作提出您的宝贵意见与建议：</p>
+<textarea  name="text3" rows="7" cols="154"></textarea>    
+<p>您的联系电话：<input type="text" name="tel">
+填写日期： 
+<select name="year" > <!-- size='2.5' -->
+	<option value="2016">2016</option>
+	<option value="2017">2017</option>
+	<option value="2018">2018</option>
+	<option value="2019" selected>2019</option>
+	<!-- <option name="class-stage" value="prerise">PreRise</option> -->
+</select>年
+<select name="month"> <!--  -->
+	<option value="1" selected>Jan</option>
+	<option value="2">Feb</option>
+	<option value="3">Mar</option>
+	<option value="4">Apr</option>
+	<option value="5">May</option>
+	<option value="6">June</option>
+	<option value="7">July</option>
+	<option value="8">Aug</option>
+	<option value="9">Sep</option>
+	<option value="10">Oct</option>
+	<option value="11">Nov</option>
+	<option value="12">Dec</option>
+</select>月
+<select name="dayDigit1"> <!--  -->
+	<option value="0">0</option>
+	<option value="1" selected>1</option>
+	<option value="2">2</option>
+	<option value="3">3</option>
+	<option value="4">4</option>
+	<option value="5">5</option>
+	<option value="6">6</option>
+	<option value="7">7</option>
+	<option value="8">8</option>
+	<option value="9">9</option>
+</select>
+<select  name="dayDigit2"> <!--  -->
+	<option value="0">0</option>
+	<option value="1">1</option>
+	<option value="2">2</option>
+	<option value="3">3</option>
+	<option value="4">4</option>
+	<option value="5">5</option>
+	<option value="6">6</option>
+	<option value="7">7</option>
+	<option value="8">8</option>
+	<option value="9">9</option>
+</select>
+日
+<!-- -->
+<input type=submit value="Submit form!">
+    </form>
+    <!-- -->
+</body>
+</html>

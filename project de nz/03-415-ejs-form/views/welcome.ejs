@@ -1,0 +1,19 @@
+<!-- This is views/welcome.ejs -->
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>Welcome, <%= username %>!</h1>
+        <% if(isAdmin) { %>
+            <p>
+                <!-- // -->
+                Remember to check your email every 24 hours!
+            </p>
+        <% } %>
+        <p>
+            <!-- // not real dir, the express.static one -->
+            <a href="./public/survey.html">survey</a>
+            <a href="./public/form.html">form</a>
+        </p>
+        <!-- // -->
+    </body>
+</html>
