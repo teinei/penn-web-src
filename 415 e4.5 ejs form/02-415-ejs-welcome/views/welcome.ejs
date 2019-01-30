@@ -1,0 +1,16 @@
+<!-- This is views/welcome.ejs -->
+<!-- // -->
+<!-- // -->
+<!DOCTYPE html>
+<html>
+    <body>
+        <!-- //<%= ejs should evaluate -->
+        <h1>Welcome, <%= username %>!</h1>
+        <!-- //<% ejs should evaluate -->
+        <% if(isAdmin) { %>
+            <p>
+                Remember to check your email every 24 hours!
+            </p>
+        <% } %>
+    </body>
+</html>
