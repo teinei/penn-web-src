@@ -1,6 +1,8 @@
 <form action='/update' method='post'>
 Name: <%= person.name %><br>
+<!-- don show this but submit -->
 <input name='username' value='<%= person.name %>' hidden>
+<!-- don show this but submit -->
 Age: <input name='age' value='<%= person.age %>'>
 <input type='submit' value='Update'>
 </form>

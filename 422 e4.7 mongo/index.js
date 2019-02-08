@@ -28,39 +28,41 @@ app.use('/create', (req, res) => {
 
     });
 
-
-app.use('/all', (req, res) => {
+// slash all to handle view all
+app.use('/all', (req, res) => { //rawt '/all'
     
-    Person.find( {}, (err, allPeople) => {
+    Person.find( {}, (err, allPeople) => { // conduct query
 		if (err) {
 		    res.type('html').status(500);
 		    res.send('Error: ' + err);
 		}
 		else {
-		    if (allPeople.length == 0) {
-			res.type('html').status(200);
-			res.send('There are no people');
+		    if (allPeople.length == 0) { // no person objects in db
+				res.type('html').status(200); //ok status
+				res.send('There are no people');
 		    }
 		    else {
-			res.render('showAll', { persons: allPeople });
+				res.render('showAll', { persons: allPeople });
+				//
 		    }
 		}
 	});
     });
 
 
-app.use('/person', (req, res) => {
+app.use('/person', (req, res) => { //
 	var searchName = req.query.name;
-	Person.findOne( {name: searchName}, (err, person) => {
+	Person.findOne( {name: searchName}, (err, person) => { //another search
+		//person .find find all
 		if (err) {
 		    res.type('html').status(500);
-		    res.send('Error: ' + err);
+		    res.send('Error: ' + err); //text of error
 		}
-		else if (!person) {
+		else if (!person) { //no person
 		    res.type('html').status(200);
 		    res.send('No person named ' + searchName);
 		}
-		else {
+		else { //everything is ok
 		    res.render('personInfo', {person: person});
 		}
 	    });
@@ -70,8 +72,7 @@ app.use('/person', (req, res) => {
 
 
 
-app.use('/update', (req, res) => {
-
+app.use('/update', (req, res) => { //update function
 
     var updateName = req.body.username;
     var updateAge = req.body.age;
@@ -86,11 +87,18 @@ app.use('/update', (req, res) => {
 		    res.send('No person named ' + updateName);
 		}
 		else {
-		    res.render('updated', { person : person });
+			person.save( (err) => {
+				if(err){ //check for errors 
+					res.type('html').status(500);
+					res.send('Error: '+err);
+				}else{
+					res.render('updated', { person: person})
+				}
+			});
+		    //res.render('updated', { person : person });
 		}
 	    });
-        
-
+    
     });
 
 
